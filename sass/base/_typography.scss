@@ -1,0 +1,24 @@
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1;
+}
+  
+h1 {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+   
+  }
+  
+h2 {
+    font-family: "Shrikhand";
+    font-size: 0.9rem;
+    font-weight: lighter;  
+}
+
+a 
+{
+    text-decoration: none;
+    color: $colour-link;
+    line-height: 1.5;
+}

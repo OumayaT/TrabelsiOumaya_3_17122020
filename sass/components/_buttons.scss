@@ -1,0 +1,25 @@
+.btn_pink{
+    background: linear-gradient(to bottom right, $colour-secondary,$colour-primary);
+    padding: 10px;
+    width: max-content;
+    margin: auto;
+    border-radius: 20px;
+    @include shadow-off;
+    a 
+    {
+        color: $colour-white;
+    }    
+}
+
+.btn_like{
+    position: absolute;
+    top:1.2rem;
+    right: 1rem;
+    font-size: 25px;
+    border:none;
+    background-color: white;
+   
+    
+}
+
+
