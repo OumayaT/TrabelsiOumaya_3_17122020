@@ -3,10 +3,24 @@
 }
 
 .container {
-  max-width: 768px;
+  max-width: 1400px;
   margin: auto;
 }
 
+@media screen and (min-width: 500px) {
+  .container {
+    width: 100%;
+  }
+
+  .etapes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .etapes_box {
+    min-width: 30%;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1;
