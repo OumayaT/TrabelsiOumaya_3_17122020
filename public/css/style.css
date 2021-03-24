@@ -4,16 +4,6 @@
   margin: 0;
 }
 
-@media screen and (min-width: 500px) {
-  .etapes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .etapes_box {
-    min-width: 30%;
-  }
-}
 html {
   font-size: 20px;
 }
@@ -38,6 +28,11 @@ a {
   text-decoration: none;
   color: black;
   line-height: 1.5;
+  font-size: 0.8rem;
+}
+
+p {
+  font-size: 0.7rem;
 }
 
 .btn_pink {
@@ -46,6 +41,7 @@ a {
   width: max-content;
   margin: auto;
   border-radius: 20px;
+  text-align: center;
   box-shadow: 5px 5px 5px #DCDCDC;
 }
 .btn_pink a {
@@ -98,6 +94,13 @@ footer {
   flex-direction: column;
   padding-top: 10px;
 }
+@media (min-width: 768px) {
+  .footer_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .footer_link a {
   color: #fff;
 }
@@ -133,6 +136,11 @@ footer {
   padding: 20px;
 }
 
+.etapes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 .etapes_box {
   background-color: #F2F2F2;
   margin: 20px 0;
@@ -143,8 +151,18 @@ footer {
   border-radius: 15px;
   box-shadow: 5px 5px 5px #DCDCDC;
 }
-.etapes i {
+.etapes_box i {
   margin-right: 10px;
+}
+@media (min-width: 768px) {
+  .etapes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .etapes_box {
+    width: 25%;
+  }
 }
 
 .box_num {
@@ -171,6 +189,15 @@ footer {
 .resto_list {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 768px) {
+  .resto_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+  }
 }
 
 .box_resto {

@@ -4,10 +4,12 @@
     width: max-content;
     margin: auto;
     border-radius: 20px;
+    text-align: center;
     @include shadow-off;
     a 
     {
         color: $colour-white;
+        
     }    
 }
 

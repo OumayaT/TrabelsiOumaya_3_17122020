@@ -37,14 +37,14 @@
 .fct
 {
     padding: 20px;
-
 }
 
-.etapes 
+.etapes
 {
-    
-    &_box 
-    {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &_box{
         background-color: $background-clear;
         margin:  20px 0;
         display: flex;
@@ -53,12 +53,25 @@
         align-items: center;
         border-radius: 15px;
         @include shadow-off;
+
+        i{
+            margin-right: 10px;
+        }
     }
-    i 
-    {
-        margin-right:10px;
+
+    @include md {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        &_box {
+            width: 25%;
+        }
     }
 }
+
+
+
+  
   
 
 .box_num {

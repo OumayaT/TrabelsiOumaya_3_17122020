@@ -2,3 +2,15 @@
     box-shadow: 5px 5px 5px $background-dark;
 }
 
+@mixin md {
+    @media (min-width: $screen-medium) {
+        @content;
+    }
+}
+
+
+@mixin large {
+    @media (min-width: #{$screen-large}) {
+        @content;
+    }
+}
