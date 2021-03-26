@@ -9,8 +9,9 @@
 }
 
 
-@mixin large {
+@mixin xl {
     @media (min-width: #{$screen-large}) {
         @content;
     }
 }
+

@@ -1,7 +1,7 @@
 .btn_pink{
-    background: linear-gradient(to bottom right, $colour-secondary,$colour-primary);
-    padding: 10px;
-    width: max-content;
+    background: linear-gradient(to bottom right,$colour-secondary, $colour-primary);
+    padding:  10px 5px;
+    width: 9rem;
     margin: auto;
     border-radius: 20px;
     text-align: center;
@@ -9,19 +9,45 @@
     a 
     {
         color: $colour-white;
-        
+      
     }    
 }
 
 .btn_like{
     position: absolute;
-    top:1.2rem;
+    bottom: 1rem;
     right: 1rem;
     font-size: 25px;
     border:none;
     background-color: white;
+    z-index: 3;
    
+}
+
+.btn_like:focus
+{
+    z-index: 1;
     
 }
 
+.btn_like_pink{
+    font-size: 25px;
+    border:none;
+    background-color: white;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 2;
+    
+   
+    .fa-heart
+    {
+        font-size: 25px;
+        background: -webkit-linear-gradient($colour-primary, $colour-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
+
+}
 

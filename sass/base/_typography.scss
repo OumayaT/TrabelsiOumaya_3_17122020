@@ -11,14 +11,19 @@ body {
   
 h1 {
     font-family: "Shrikhand";
-    font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 1;
+    
   }
   
 h2 {
     font-family: "Shrikhand",sans-serif ;
-    font-size: 0.5rem;
-    font-weight: 50;
-    
+    font-size: 1rem;
+}
+h3 
+{
+    font-family: "Shrikhand", sans-serif;
+    font-size: 0.8rem;
 }
 
 a 
@@ -27,6 +32,7 @@ a
     color: $colour-link;
     line-height: 1.5;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 
 p 

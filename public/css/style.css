@@ -15,13 +15,18 @@ body {
 
 h1 {
   font-family: "Shrikhand";
-  font-size: 1rem;
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 h2 {
   font-family: "Shrikhand", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 50;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 0.8rem;
 }
 
 a {
@@ -29,6 +34,7 @@ a {
   color: black;
   line-height: 1.5;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 p {
@@ -37,8 +43,8 @@ p {
 
 .btn_pink {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  padding: 10px;
-  width: max-content;
+  padding: 10px 5px;
+  width: 9rem;
   margin: auto;
   border-radius: 20px;
   text-align: center;
@@ -50,11 +56,32 @@ p {
 
 .btn_like {
   position: absolute;
-  top: 1.2rem;
+  bottom: 1rem;
   right: 1rem;
   font-size: 25px;
   border: none;
   background-color: white;
+  z-index: 3;
+}
+
+.btn_like:focus {
+  z-index: 1;
+}
+
+.btn_like_pink {
+  font-size: 25px;
+  border: none;
+  background-color: white;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+.btn_like_pink .fa-heart {
+  font-size: 25px;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header {
@@ -74,15 +101,10 @@ p {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: auto;
 }
 
-@media screen and (min-width: 500px) {
-  .container {
-    width: 100%;
-  }
-}
 footer {
   background-color: #303030;
   color: #fff;
@@ -92,13 +114,14 @@ footer {
 .footer_link {
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
+  padding: 10px 0;
 }
 @media (min-width: 768px) {
   .footer_link {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 20px;
   }
 }
 .footer_link a {
@@ -122,14 +145,14 @@ footer {
 
 .presentation {
   background-color: #F2F2F2;
-  padding: 30px;
+  padding: 20px;
 }
 .presentation h1 {
   text-align: center;
 }
-.presentation h2 {
+.presentation p {
   text-align: center;
-  padding: 15px;
+  padding: 15px 0;
 }
 
 .fct {
@@ -182,9 +205,6 @@ footer {
   background-color: #F2F2F2;
   padding: 20px;
 }
-#resto h1 {
-  padding: 20px 0;
-}
 
 .resto_list {
   display: flex;
@@ -193,7 +213,16 @@ footer {
 @media (min-width: 768px) {
   .resto_list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 250px);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .resto_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 250px);
     grid-column-gap: 50px;
     grid-row-gap: 50px;
@@ -204,13 +233,12 @@ footer {
   margin: 10px 0;
   background-color: #fff;
   border-radius: 20px;
-  text-decoration: none;
   position: relative;
   box-shadow: 5px 5px 5px #DCDCDC;
 }
 .box_resto img {
   width: 100%;
-  height: 150px;
+  height: 150PX;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
