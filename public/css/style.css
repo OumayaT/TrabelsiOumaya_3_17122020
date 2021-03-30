@@ -28,6 +28,7 @@ h2 {
 h3 {
   font-family: "Shrikhand", sans-serif;
   font-size: 0.8rem;
+  line-height: 1rem;
 }
 
 a {
@@ -41,6 +42,10 @@ a {
 p {
   font-size: 0.7rem;
   line-height: 1rem;
+}
+
+button {
+  cursor: pointer;
 }
 
 .btn_pink {
@@ -57,35 +62,32 @@ p {
 }
 
 .btn_like {
-  bottom: 1rem;
-  right: 1rem;
-  background-color: inherit;
   position: absolute;
-  font-size: 25px;
-  border: none;
-  z-index: 3;
-}
-
-.btn_like:focus {
-  z-index: 1;
-}
-
-.btn_like_pink {
   right: 1rem;
-  bottom: 1rem;
-  z-index: 2;
-  background-color: inherit;
-  font-size: 25px;
+  font-size: 1.3rem;
+  bottom: 1.5rem;
   border: none;
   background-color: inherit;
-  position: absolute;
-  z-index: 2;
 }
-.btn_like_pink .fa-heart {
-  font-size: 25px;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+
+.btn_like .far {
+  position: absolute;
+}
+
+.btn_like:focus .fas {
+  opacity: 1;
+}
+.btn_like:focus .far {
+  opacity: 0;
+}
+
+.btn_like .fas {
+  opacity: 0;
+  transition: opacity 2s;
+  background: -webkit-linear-gradient(top, #9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .header {
@@ -104,11 +106,6 @@ p {
   font-size: 20px;
 }
 
-.container {
-  max-width: 1300px;
-  margin: auto;
-}
-
 footer {
   background-color: #303030;
   color: #fff;
@@ -120,7 +117,7 @@ footer {
   flex-direction: column;
   padding: 10px 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .footer_link {
     display: flex;
     flex-direction: row;
@@ -165,10 +162,6 @@ footer {
 .btn_like_p {
   top: 0.5rem;
   right: 1rem;
-  position: absolute;
-  font-size: 25px;
-  border: none;
-  z-index: 3;
 }
 
 .btn_like_p:focus {
@@ -178,17 +171,6 @@ footer {
 .btn_like_pink_p {
   right: 1rem;
   top: 0.5rem;
-  font-size: 25px;
-  border: none;
-  background-color: inherit;
-  position: absolute;
-  z-index: 2;
-}
-.btn_like_pink_p .fa-heart {
-  font-size: 25px;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .card {
@@ -196,7 +178,7 @@ footer {
   padding: 10px;
   justify-content: space-around;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .card {
     display: flex;
   }
@@ -209,7 +191,7 @@ footer {
   border-radius: 10px;
   box-shadow: 5px 5px 5px #DCDCDC;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .menu_box {
     width: 15rem;
     height: 4rem;
@@ -295,12 +277,14 @@ footer {
 
 .fct {
   padding: 20px;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .etapes {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .etapes_box {
   background-color: #F2F2F2;
@@ -315,11 +299,11 @@ footer {
 .etapes_box i {
   margin-right: 10px;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .etapes {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .etapes_box {
     width: 25%;
@@ -344,31 +328,13 @@ footer {
   padding: 20px;
 }
 
-.resto_list {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 768px) {
-  .resto_list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 250px);
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
-  }
-}
-@media (min-width: 1025px) {
-  .resto_list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 250px);
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
-  }
+.resto_container {
+  max-width: 1400px;
+  margin: auto;
 }
 
 .box_resto {
-  margin: 10px 0;
+  margin: 30px 0;
   background-color: #fff;
   border-radius: 20px;
   position: relative;
@@ -376,9 +342,19 @@ footer {
 }
 .box_resto img {
   width: 100%;
-  height: 150PX;
+  height: 150px;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
+}
+
+@media (min-width: 769px) {
+  .resto_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 300px);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+  }
 }
 
 .new {
@@ -398,6 +374,7 @@ footer {
 .details h2 {
   font-size: large;
   font-weight: bold;
+  font-family: "roboto";
 }
 
 /*# sourceMappingURL=style.css.map */
