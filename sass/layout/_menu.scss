@@ -11,6 +11,10 @@
         bottom: 0;
         display: flex;
         border-radius: 15px 15px 0 0;
+        .btn_like {
+            top: 0.2rem;
+            
+        }
        
     }
     img{
@@ -21,40 +25,64 @@
         @include xl{
             height: 300px;
         }
-       
-       
     }
     @include xl {
         height: 300px;
+       
     }
 }
 
-.btn_like_p{
-    top: 0.5rem;
-    right: 1rem;
+.enseigne
+{
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+}
+.card {
+    background-color: $background-clear;
+    width: 100%;
+    margin: 0;
    
 }
 
-.btn_like_p:focus {
-    z-index: 1;
-}
-.btn_like_pink_p{
+.group {
+    max-width: 1400px;
+    margin: auto;
     
-    right: 1rem;
-    top: 0.5rem;
-
+    @include xl {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include md {
+       display: flex;
+       justify-content: space-between;
+    }
+  
+}
+.entree, .plat, .dessert  {
+    padding: 10px;
+ 
 }
 
-.card 
-{
-    background-color: $background-clear;
-    padding: 10px;
-    justify-content: space-around;
-    @include md {
-        display: flex;
+.titre_group {
+    position: relative;
+    padding: 5px;
+    h2 {
+        font-family: 'roboto';
+        font-weight: normal;
+        font-size: medium;
+        
     }
 }
-
+.titre_group ::before 
+{
+    content: "";
+    position: absolute;
+    background-color: $colour-tertiary;
+    width: 40px;
+    height: 2px;
+    bottom: 0;
+}
 .menu_box 
 {
     background-color: $colour-white;
@@ -62,40 +90,51 @@
     display: flex;
     border-radius: 10px;
     @include shadow-off;
-    @include md {
-        width: 15rem;
-        height: 4rem;
-    }
-  
     @include xl {
-        width: 20rem;
+        width: 18rem;
     }
+   
 }
-.nom
-{
-    position: relative;
+
+.nom {
     width: 100%;
     padding: 10px;
-    border-radius: 0 10px 10px 0;
-   &_titre{
-       font-weight: bold;
+    position: relative;
+    white-space: nowrap;
+    &_titre{
+        font-weight: bold;
+        
+    }
+   &_description{
+       font-size: small;
    }
-  
 }
 
-.nom:hover
-{
- transform-origin: top left;
- transform: scaleX(0.5);
- transition: transform 1000ms;
-}
-
-.prix {
+.prix{
     position: absolute;
-    right: 0;
-    bottom : 0.3rem;
+    right: -1.5rem;
+    background-color: $colour-white;
+    padding-right: 10px;
+    bottom: 0.5rem;
     font-weight: bold;
+    span {
+        margin-right: 5px;
+        display: none;
+    } 
 }
+
+.menu_box:hover .prix
+{
+    right: 1.2rem;
+    transition: right 1s; transform: 1s;
+    span {
+        display: unset;
+        @include xl {
+            display: none;
+        }
+    }
+}
+
 
 .check
 {
@@ -104,7 +143,7 @@
     justify-content: center;
     align-items: center;
     padding: 5px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 5px 5px 0;
     transform: scaleX(0);
     @include shadow-off;
 }
@@ -115,10 +154,76 @@
     transform: scaleX(2);
     transition: transform 1000ms;
     
+    .fa-check-circle {
+        color: $colour-white;
+        font-size: 18px;
+        animation-name: spin;
+        animation-duration: 1s;
+        /* transform: rotate(3deg); */
+        /* transform: rotate(0.3rad);/ */
+        /* transform: rotate(3grad); */ 
+        /* transform: rotate(.03turn);  */
+    }
+  
+    @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg);
+        }
+    }
 }
+
 
 .commander
 {
     background-color: $background-clear;
     padding: 30px 0;
+}
+
+.entree {
+    opacity:0;
+    -moz-animation: anim 3s linear forwards 1s;
+    -webkit-animation: anim 3s linear forwards 1s;
+    -o-animation: anim 3s linear forwards 1s;
+    -ms-animation: anim 3s linear forwards 1s;
+    animation: anim 3s linear forwards 1s;
+}
+.plat{
+    opacity:0;
+    -moz-animation: anim 3s linear forwards 2s;
+    -webkit-animation: anim 3s linear forwards 2s;
+    -o-animation: anim 3s linear forwards 2s;
+    -ms-animation: anim 3s linear forwards 2s;
+    animation: anim 3s linear forwards 2s;
+}
+
+.dessert{
+    opacity:0;
+    -moz-animation: anim 3s linear forwards 3s;
+    -webkit-animation: anim 3s linear forwards 3s;
+    -o-animation: anim 3s linear forwards 2s;
+    -ms-animation: anim 3s linear forwards 3s;
+    animation: anim 3s linear forwards 3s;
+}
+@-moz-keyframes anim {
+   0%  {opacity:0;}
+   100% {opacity:1;}
+}
+@-webkit-keyframes anim {
+   0%  {opacity:0;}
+   100% {opacity:1;}
+}
+@-o-keyframes anim {
+   0%  {opacity:0;}
+   100% {opacity:1;}
+}
+@-ms-keyframes anim {
+   0%  {opacity:0;}
+   100% {opacity:1;}
+}
+@keyframes anim {
+   0%  {opacity:0;}
+   100% {opacity:1;}
 }

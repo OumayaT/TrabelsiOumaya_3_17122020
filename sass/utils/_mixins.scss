@@ -3,7 +3,7 @@
 }
 
 @mixin md {
-    @media (min-width: 769px) {
+    @media (min-width: $screen-medium) {
         @content;
     }
 }

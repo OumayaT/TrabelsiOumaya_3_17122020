@@ -1,15 +1,23 @@
+.container_footer{
+    color: $colour-white;
+    padding: 20px;
+    max-width: 1400PX;
+    margin: auto;
+}
+
+
 footer
 {
     background-color: $colour_footer;
     color: $colour-white;
-    padding: 20px;
+   
 }
 
 .footer_link
 {
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
+    padding: 10px;
     @include md{
         display: flex;
         flex-direction: row;
