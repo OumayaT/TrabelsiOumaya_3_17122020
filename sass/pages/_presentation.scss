@@ -74,9 +74,16 @@
     i {
         margin: 0 10px;
     }  
+   
 }
 
-
+.etapes_box:hover {
+    background-color: lighten($colour-primary, 35% );
+    
+}
+.etapes_box:hover i {
+    color: $colour-primary;
+}
 .box_num
 {
     color: $colour-white;
