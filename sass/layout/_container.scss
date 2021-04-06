@@ -2,9 +2,12 @@
     position: absolute;
     top: 0;
     width: 100%;
-    animation: container 0s 3s both;
-   
+    animation: container ;
+    animation-duration: 2s;
+    animation-delay: 0s;
+  
 }
+
 @keyframes container
 { 
      0% {
@@ -15,4 +18,3 @@
     }
 
 }
-

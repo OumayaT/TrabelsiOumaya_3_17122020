@@ -4,15 +4,17 @@
   z-index: 2;
   height: 180vh;
   width: 100%;
-  animation: loading  3s ;
- -webkit-animation: loading 3s ;
- visibility: hidden;
- 
+  animation-name: loading;
+  animation-duration: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
 }
 
-@keyframes loading {
-  from { opacity: 1; visibility: visible;}
-  to {  opacity: 0; visibility: hidden;}
+@keyframes loading 
+{
+  from {opacity: 1;}
+  to {opacity: 0;}
 }
 
 .loader{
@@ -60,3 +62,6 @@
     75%  {z-index: 3; transform: translateX(-80px);}
     100% {z-index: 3; transform: translateX(0);}
   }
+
+
+ 

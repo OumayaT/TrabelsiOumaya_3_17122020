@@ -110,7 +110,9 @@ button {
   position: absolute;
   top: 0;
   width: 100%;
-  animation: container 0s 3s both;
+  animation: container;
+  animation-duration: 2s;
+  animation-delay: 0s;
 }
 
 @keyframes container {
@@ -156,19 +158,19 @@ footer {
   z-index: 2;
   height: 180vh;
   width: 100%;
-  animation: loading 3s;
-  -webkit-animation: loading 3s;
-  visibility: hidden;
+  animation-name: loading;
+  animation-duration: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
 }
 
 @keyframes loading {
   from {
     opacity: 1;
-    visibility: visible;
   }
   to {
     opacity: 0;
-    visibility: hidden;
   }
 }
 .loader {
