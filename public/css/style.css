@@ -156,6 +156,7 @@ footer {
   z-index: 2;
   height: 100vh;
   width: 100%;
+  animation: visibility;
   visibility: hidden;
   -webkit-transition: visibility 3s;
   transition: visibility 3s;
@@ -590,6 +591,15 @@ footer {
 }
 
 @media (min-width: 769px) {
+  .resto_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 300px);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+  }
+}
+@media (min-width: 1025px) {
   .resto_list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
