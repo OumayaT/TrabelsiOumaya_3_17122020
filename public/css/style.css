@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+a:hover {
+  transform: translateY(2px);
+}
+
+button:hover {
+  transform: translateY(2px);
+}
+
+.btn_pink:hover {
+  transform: translateY(2px);
+}
+
 * {
   margin: 0;
 }
@@ -111,17 +123,18 @@ button {
   position: absolute;
   top: 0;
   width: 100%;
-  animation: container;
-  animation-duration: 4s;
+  z-index: 2;
+  animation-name: testerpage;
+  animation-duration: 3s;
   animation-delay: 0s;
 }
 
-@keyframes container {
-  0% {
-    transform: translateX(-9999px);
+@keyframes testerpage {
+  from {
+    visibility: hidden;
   }
-  100% {
-    transform: translateX(0);
+  to {
+    visibility: visible;
   }
 }
 .container_footer {
@@ -141,7 +154,7 @@ footer {
   flex-direction: column;
   padding: 10px;
 }
-@media (min-width: 769px) {
+@media (min-width: 680px) {
   .footer_link {
     display: flex;
     flex-direction: row;
@@ -156,15 +169,29 @@ footer {
 .container_loader {
   position: relative;
   background-color: #fff;
-  animation: loading 0s 1 forwards 3s;
+  z-index: 3;
+  height: 500vh;
+  animation: loading 0s forwards 3s;
+}
+@media (min-width: 1200px) {
+  .container_loader {
+    height: 150vh;
+  }
+}
+@media (min-width: 680px) {
+  .container_loader {
+    height: 180vh;
+  }
 }
 
 @keyframes loading {
   from {
     opacity: 1;
+    z-index: 3;
   }
   to {
     opacity: 0;
+    z-index: 1;
   }
 }
 .loader {
@@ -251,13 +278,14 @@ footer {
 .entete_titre {
   background-color: #F2F2F2;
   width: 100%;
+  padding: 20px 0;
   position: absolute;
-  bottom: 0;
+  bottom: -2rem;
   display: flex;
   border-radius: 15px 15px 0 0;
 }
 .entete_titre .btn_like {
-  top: 0.2rem;
+  top: 1rem;
 }
 .entete img {
   width: 100%;
@@ -265,12 +293,12 @@ footer {
   object-fit: cover;
   object-position: center;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
   .entete img {
     height: 300px;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
   .entete {
     height: 300px;
   }
@@ -286,21 +314,23 @@ footer {
   background-color: #F2F2F2;
   width: 100%;
   margin: 0;
+  padding: 20px 0;
 }
 
 .group {
   max-width: 1400px;
   margin: auto;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
   .group {
     display: flex;
     justify-content: space-between;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 680px) {
   .group {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
@@ -333,9 +363,10 @@ footer {
   margin: 10px 0;
   display: flex;
   border-radius: 10px;
+  overflow: hidden;
   box-shadow: 5px 5px 5px #DCDCDC;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
   .menu_box {
     width: 18rem;
   }
@@ -368,14 +399,14 @@ footer {
 }
 
 .menu_box:hover .prix {
-  right: 1.2rem;
+  right: 0.5rem;
   transition: right 1s;
   transform: 1s;
 }
 .menu_box:hover .prix span {
   display: unset;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
   .menu_box:hover .prix span {
     display: none;
   }
@@ -386,15 +417,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 10px;
   border-radius: 0 10px 10px 0;
-  transform: scaleX(0);
+  transform: translateX(100%);
   box-shadow: 5px 5px 5px #DCDCDC;
 }
 
 .menu_box:hover .check {
   transform-origin: top right;
-  transform: scaleX(2);
+  transform: translateX(0%);
   transition: transform 1000ms;
 }
 .menu_box:hover .check .fa-check-circle {
@@ -530,7 +561,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 }
-@media (min-width: 769px) {
+@media (min-width: 680px) {
   .etapes {
     display: flex;
     flex-direction: row;
@@ -557,7 +588,7 @@ footer {
 }
 
 .etapes_box:hover {
-  background-color: #f2eafb;
+  background-color: #d7c0f2;
 }
 
 .etapes_box:hover i {
@@ -603,7 +634,13 @@ footer {
   border-radius: 20px 20px 0 0;
 }
 
-@media (min-width: 769px) {
+.resto_list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 300px);
+  grid-row-gap: 10px;
+}
+@media (min-width: 680px) {
   .resto_list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -612,7 +649,7 @@ footer {
     grid-row-gap: 50px;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
   .resto_list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

@@ -2,20 +2,25 @@
     position: absolute;
     top: 0;
     width: 100%;
-    animation: container ;
-    animation-duration: 4s;
+    z-index: 2;
+  
+    animation-name: testerpage;
+    animation-duration: 3s;
     animation-delay: 0s;
+   
+
+
+    
+    
+
     
   
 }
 
-@keyframes container
-{ 
-     0% {
-    transform: translateX(-9999px);
-    }
-    100% {
-        transform: translateX(0);
-    }
 
+@keyframes testerpage
+{
+  from {visibility: hidden;}
+ 
+  to {visibility: visible;}
 }

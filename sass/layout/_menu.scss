@@ -7,12 +7,13 @@
     {
         background-color:$background-clear;
         width: 100%;
+        padding: 20px 0;
         position: absolute;
-        bottom: 0;
+        bottom: -2rem;
         display: flex;
         border-radius: 15px 15px 0 0;
         .btn_like {
-            top: 0.2rem;
+            top: 1rem;
             
         }
        
@@ -31,17 +32,18 @@
        
     }
 }
-
 .enseigne
 {
     max-width: 1400px;
     margin: auto;
     width: 100%;
 }
+
 .card {
     background-color: $background-clear;
     width: 100%;
     margin: 0;
+    padding: 20px 0;
    
 }
 
@@ -54,7 +56,8 @@
         justify-content: space-between;
     }
     @include md {
-       display: flex;
+      display: flex;
+      flex-wrap: wrap;
        justify-content: space-between;
     }
   
@@ -89,6 +92,7 @@
     margin: 10px 0;
     display: flex;
     border-radius: 10px;
+    overflow: hidden;
     @include shadow-off;
     @include xl {
         width: 18rem;
@@ -125,7 +129,7 @@
 
 .menu_box:hover .prix
 {
-    right: 1.2rem;
+    right: 0.5rem;
     transition: right 1s; transform: 1s;
     span {
         display: unset;
@@ -142,16 +146,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     border-radius: 0 10px 10px 0;
-    transform: scaleX(0);
+    transform: translateX(100%);
     @include shadow-off;
 }
 
 .menu_box:hover .check
 {
     transform-origin: top right;
-    transform: scaleX(2);
+    transform: translateX(0%);
     transition: transform 1000ms;
     
     .fa-check-circle {
