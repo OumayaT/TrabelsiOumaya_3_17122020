@@ -13,3 +13,70 @@
 .box_resto:hover, .menu_box:hover{
     @include done;
 }
+
+.menu_box:hover .prix
+{
+    right: 0.5rem;
+    transition: right 1s; transform: 1s;
+    span {
+        display: unset;
+        @include xl {
+            display: none;
+        }
+    }
+}
+
+
+
+.menu_box:hover .check
+{
+    transform-origin: top right;
+    transform: translateX(0%);
+    transition: transform 1000ms;
+    
+    .fa-check-circle {
+        color: $colour-white;
+        font-size: 18px;
+        animation-name: spin;
+        animation-duration: 1s;
+        /* transform: rotate(3deg); */
+        /* transform: rotate(0.3rad);/ */
+        /* transform: rotate(3grad); */ 
+        /* transform: rotate(.03turn);  */
+    }
+  
+    @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg);
+        }
+    }
+}
+
+
+
+.box1{
+   animation: apparition;
+   animation-duration: 1s;
+}
+.box2{
+    animation: apparition;
+    animation-duration: 2s;
+}
+.box3{
+    animation: apparition;
+    animation-duration: 3s;  
+}
+
+.box4{
+    animation: apparition;
+    animation-duration: 4s;
+}
+
+@keyframes apparition {
+    from{ transform: translateY(20px); opacity: 0;}
+    to { transform: translateY(0);opacity: 1;}
+  
+}
