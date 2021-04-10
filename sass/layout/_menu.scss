@@ -42,8 +42,8 @@
 .card {
     background-color: $background-clear;
     width: 100%;
-    margin: 0;
-    padding: 20px 0;
+    margin:  0;
+    padding: 30px 0;
    
 }
 
@@ -92,6 +92,7 @@
     margin: 10px 0;
     display: flex;
     border-radius: 10px;
+  
     overflow: hidden;
     @include shadow-off;
     @include xl {
@@ -99,6 +100,9 @@
     }
    
 }
+
+
+    
 
 .nom {
     width: 100%;
@@ -183,51 +187,68 @@
 .commander
 {
     background-color: $background-clear;
-    padding: 30px 0;
+    padding: 40px;
+
 }
 
-.entree {
-    opacity:0;
-    -moz-animation: anim 3s linear forwards 1s;
-    -webkit-animation: anim 3s linear forwards 1s;
-    -o-animation: anim 3s linear forwards 1s;
-    -ms-animation: anim 3s linear forwards 1s;
-    animation: anim 3s linear forwards 1s;
-}
-.plat{
-    opacity:0;
-    -moz-animation: anim 3s linear forwards 2s;
-    -webkit-animation: anim 3s linear forwards 2s;
-    -o-animation: anim 3s linear forwards 2s;
-    -ms-animation: anim 3s linear forwards 2s;
-    animation: anim 3s linear forwards 2s;
+
+
+.box1
+{
+   animation: apparition;
+   animation-duration: 1s;
+   
+   
 }
 
-.dessert{
-    opacity:0;
-    -moz-animation: anim 3s linear forwards 3s;
-    -webkit-animation: anim 3s linear forwards 3s;
-    -o-animation: anim 3s linear forwards 2s;
-    -ms-animation: anim 3s linear forwards 3s;
-    animation: anim 3s linear forwards 3s;
+@keyframes apparition {
+    from{ transform: translateY(20px); opacity: 0;}
+    to { transform: translateY(0);opacity: 1;}
+  
 }
-@-moz-keyframes anim {
-   0%  {opacity:0;}
-   100% {opacity:1;}
+
+
+.box2
+{
+    animation: apparition;
+    animation-duration: 2s;
+   
+ 
+   
 }
-@-webkit-keyframes anim {
-   0%  {opacity:0;}
-   100% {opacity:1;}
+
+@keyframes apparition {
+    from{ transform: translateY(20px); opacity: 0;}
+    to { transform: translateY(0);opacity: 1;}
+  
 }
-@-o-keyframes anim {
-   0%  {opacity:0;}
-   100% {opacity:1;}
+
+.box3
+{
+    animation: apparition;
+    animation-duration: 3s;
+   
+ 
+   
 }
-@-ms-keyframes anim {
-   0%  {opacity:0;}
-   100% {opacity:1;}
+
+@keyframes apparition {
+    from{ transform: translateY(20px); opacity: 0;}
+    to { transform: translateY(0);opacity: 1;}
+  
 }
-@keyframes anim {
-   0%  {opacity:0;}
-   100% {opacity:1;}
+
+.box4
+{
+    animation: apparition;
+    animation-duration: 4s;
+   
+ 
+   
+}
+
+@keyframes apparition {
+    from{ transform: translateY(20px); opacity: 0;}
+    to { transform: translateY(0);opacity: 1;}
+  
 }

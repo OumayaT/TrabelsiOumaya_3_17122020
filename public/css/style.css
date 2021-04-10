@@ -112,7 +112,7 @@ button {
   width: 150px;
 }
 
-.fa-arrow-left {
+.back {
   position: absolute;
   left: 1rem;
   top: 1rem;
@@ -314,7 +314,7 @@ footer {
   background-color: #F2F2F2;
   width: 100%;
   margin: 0;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 .group {
@@ -449,73 +449,66 @@ footer {
 
 .commander {
   background-color: #F2F2F2;
-  padding: 30px 0;
+  padding: 40px;
 }
 
-.entree {
-  opacity: 0;
-  -moz-animation: anim 3s linear forwards 1s;
-  -webkit-animation: anim 3s linear forwards 1s;
-  -o-animation: anim 3s linear forwards 1s;
-  -ms-animation: anim 3s linear forwards 1s;
-  animation: anim 3s linear forwards 1s;
+.box1 {
+  animation: apparition;
+  animation-duration: 1s;
 }
 
-.plat {
-  opacity: 0;
-  -moz-animation: anim 3s linear forwards 2s;
-  -webkit-animation: anim 3s linear forwards 2s;
-  -o-animation: anim 3s linear forwards 2s;
-  -ms-animation: anim 3s linear forwards 2s;
-  animation: anim 3s linear forwards 2s;
-}
-
-.dessert {
-  opacity: 0;
-  -moz-animation: anim 3s linear forwards 3s;
-  -webkit-animation: anim 3s linear forwards 3s;
-  -o-animation: anim 3s linear forwards 2s;
-  -ms-animation: anim 3s linear forwards 3s;
-  animation: anim 3s linear forwards 3s;
-}
-
-@-moz-keyframes anim {
-  0% {
+@keyframes apparition {
+  from {
+    transform: translateY(20px);
     opacity: 0;
   }
-  100% {
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@-webkit-keyframes anim {
-  0% {
+.box2 {
+  animation: apparition;
+  animation-duration: 2s;
+}
+
+@keyframes apparition {
+  from {
+    transform: translateY(20px);
     opacity: 0;
   }
-  100% {
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@-o-keyframes anim {
-  0% {
+.box3 {
+  animation: apparition;
+  animation-duration: 3s;
+}
+
+@keyframes apparition {
+  from {
+    transform: translateY(20px);
     opacity: 0;
   }
-  100% {
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@-ms-keyframes anim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.box4 {
+  animation: apparition;
+  animation-duration: 4s;
 }
-@keyframes anim {
-  0% {
+
+@keyframes apparition {
+  from {
+    transform: translateY(20px);
     opacity: 0;
   }
-  100% {
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }

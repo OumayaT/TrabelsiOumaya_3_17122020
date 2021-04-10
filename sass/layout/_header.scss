@@ -3,20 +3,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
   img {
     width: 150px;
   }
+  
 
 }
 
 
 
-.fa-arrow-left
-{
+.back {
+ 
 
- position: absolute;
- left: 1rem;
- top: 1rem;
- font-size: 20px;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-size: 20px;
 
+  
 }
