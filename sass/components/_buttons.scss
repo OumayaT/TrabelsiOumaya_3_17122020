@@ -6,6 +6,7 @@
     border-radius: 20px;
     text-align: center;
     @include shadow-off;
+   
     a 
     {
         color: $colour-white;
@@ -26,8 +27,6 @@
 .btn_like .far
 {
     position: absolute;
-    
-    
 
 }
 

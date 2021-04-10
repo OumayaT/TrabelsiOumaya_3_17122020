@@ -5,12 +5,10 @@
   height: 500vh;
   animation: loading 0s  forwards 3s;
   @include xl {
-    height: 150vh;
+    height: 135vh;
   }
-  @include md {
-    height: 180vh;
-  }
-
+ 
+ 
 }
 
 @keyframes loading 

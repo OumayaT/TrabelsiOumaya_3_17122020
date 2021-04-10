@@ -1,12 +1,15 @@
-a:hover {
-    transform: translateY(2px);
-}
-
-button:hover 
-{
-    transform: translateY(2px);
-}
 .btn_pink:hover{
-    transform: translateY(2px);
+    @include done;
+}
+.etapes_box:hover {
+    background-color: lighten($colour-primary, 25% );
+    @include done;
+    
+}
+.etapes_box:hover i {
+    color: $colour-primary; 
+}
 
+.box_resto:hover, .menu_box:hover{
+    @include done;
 }

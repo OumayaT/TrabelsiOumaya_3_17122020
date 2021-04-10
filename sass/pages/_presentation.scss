@@ -20,14 +20,11 @@
     background-color: $background-clear;
     padding: 20px;
     
-
     h1 {
-       
         text-align: center;
         font-family: "roboto";
     }
-    p
-    {
+    p{
         text-align: center;
         padding: 15px 0;
     }
@@ -71,19 +68,15 @@
     font-weight: bold;
     border-radius: 15px;
     @include shadow-off;
+   
     i {
         margin: 0 10px;
     }  
    
 }
 
-.etapes_box:hover {
-    background-color: lighten($colour-primary, 25% );
-    
-}
-.etapes_box:hover i {
-    color: $colour-primary;
-}
+
+
 .box_num
 {
     color: $colour-white;

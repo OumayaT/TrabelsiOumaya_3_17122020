@@ -1,14 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-a:hover {
-  transform: translateY(2px);
-}
-
-button:hover {
-  transform: translateY(2px);
-}
-
 .btn_pink:hover {
+  box-shadow: 8px 8px 8px #DCDCDC;
+  transform: translateY(2px);
+}
+
+.etapes_box:hover {
+  background-color: #d7c0f2;
+  box-shadow: 8px 8px 8px #DCDCDC;
+  transform: translateY(2px);
+}
+
+.etapes_box:hover i {
+  color: #9356DC;
+}
+
+.box_resto:hover, .menu_box:hover {
+  box-shadow: 8px 8px 8px #DCDCDC;
   transform: translateY(2px);
 }
 
@@ -175,12 +183,7 @@ footer {
 }
 @media (min-width: 1200px) {
   .container_loader {
-    height: 150vh;
-  }
-}
-@media (min-width: 680px) {
-  .container_loader {
-    height: 180vh;
+    height: 135vh;
   }
 }
 
@@ -578,14 +581,6 @@ footer {
 }
 .etapes_box i {
   margin: 0 10px;
-}
-
-.etapes_box:hover {
-  background-color: #d7c0f2;
-}
-
-.etapes_box:hover i {
-  color: #9356DC;
 }
 
 .box_num {
