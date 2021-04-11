@@ -2,11 +2,18 @@
   position: relative;
   background-color: $colour-white;
   z-index: 3;
-  height: 500vh;
+  height: 300vh;
   animation: loading 0s  forwards 3s;
-  @include xl {
-    height: 135vh;
+  @include xl
+  {
+    height: 110vh;
   }
+  @include md
+  {
+    height: 150vh;
+  }
+
+  
 }
 
 @keyframes loading 
