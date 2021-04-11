@@ -12,9 +12,12 @@
         font-size: large;
         padding-left: 10px;
         width:150px;
+        
     }
 }
-
+::placeholder {
+    color: black;
+}
 .presentation
 {
     background-color: $background-clear;

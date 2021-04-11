@@ -505,6 +505,10 @@ footer {
   width: 150px;
 }
 
+::placeholder {
+  color: black;
+}
+
 .presentation {
   background-color: #F2F2F2;
   padding: 20px;
