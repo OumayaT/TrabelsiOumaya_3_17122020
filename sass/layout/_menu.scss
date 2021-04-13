@@ -133,7 +133,7 @@
     align-items: center;
     padding: 10px;
     border-radius: 0 10px 10px 0;
-    transform: translateX(100%);
+    animation: checkout 0.2s forwards;
     @include shadow-off;
 }
 

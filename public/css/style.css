@@ -15,7 +15,7 @@
   color: #9356DC;
 }
 
-.box_resto:hover, .menu_box:hover {
+.box_resto:hover {
   box-shadow: 8px 8px 8px #DCDCDC;
   transform: translateY(2px);
 }
@@ -31,30 +31,6 @@
 @media (min-width: 1200px) {
   .menu_box:hover .prix span {
     display: none;
-  }
-}
-
-.menu_box:hover .check {
-  transform-origin: top right;
-  transform: translateX(0%);
-  transition: transform 1000ms;
-}
-.menu_box:hover .check .fa-check-circle {
-  color: #fff;
-  font-size: 18px;
-  animation-name: spin;
-  animation-duration: 1s;
-  /* transform: rotate(3deg); */
-  /* transform: rotate(0.3rad);/ */
-  /* transform: rotate(3grad); */
-  /* transform: rotate(.03turn);  */
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
 
@@ -86,6 +62,47 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+.menu_box:hover .check {
+  animation: check 1s forwards;
+  transform-origin: right;
+}
+.menu_box:hover .check .fa-check-circle {
+  color: #fff;
+  font-size: 18px;
+  animation-name: spin;
+  animation-duration: 1s;
+  /* transform: rotate(3deg); */
+  /* transform: rotate(0.3rad);/ */
+  /* transform: rotate(3grad); */
+  /* transform: rotate(.03turn);  */
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes check {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes checkout {
+  0% {
+    transform: translateX(0%);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(100%);
+    color: #fff;
   }
 }
 * {
@@ -147,6 +164,10 @@ button {
 }
 .btn_pink a {
   color: #fff;
+}
+
+.btn_pink:hover {
+  opacity: 85%;
 }
 
 .btn_like {
@@ -246,18 +267,9 @@ footer {
   position: relative;
   background-color: #fff;
   z-index: 3;
-  height: 300vh;
+  height: 100vh;
   animation: loading 0s forwards 3s;
-}
-@media (min-width: 1200px) {
-  .container_loader {
-    height: 110vh;
-  }
-}
-@media (min-width: 680px) {
-  .container_loader {
-    height: 150vh;
-  }
+  display: flex;
 }
 
 @keyframes loading {
@@ -274,7 +286,6 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 15rem;
-  height: 100vh;
   align-items: center;
   margin: auto;
 }
@@ -284,7 +295,6 @@ footer {
   border-radius: 50%;
   box-shadow: 5px 5px 5px #99E2D0;
   background: linear-gradient(80deg, #9356DC 0%, #FF79DA 35%, #99E2D0 100%);
-  transform: translateX(0);
   z-index: 2;
 }
 .loader .circle:nth-child(1) {
@@ -481,7 +491,7 @@ footer {
   align-items: center;
   padding: 10px;
   border-radius: 0 10px 10px 0;
-  transform: translateX(100%);
+  animation: checkout 0.2s forwards;
   box-shadow: 5px 5px 5px #DCDCDC;
 }
 
